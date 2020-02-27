@@ -1,0 +1,13 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.popup_dialog_class .mat-dialog-container {
+  justify-content: center;
+  text-align: center;
+  height: 150px !important;
+  width: 500px !important;
+  box-shadow: none !important;
+  border: 1px solid #75b6b6 !important;
+  border-radius: 0px !important;
+  background-color: #ffffff !important;
+  padding: 45px 40px 65px 50px !important;
+}

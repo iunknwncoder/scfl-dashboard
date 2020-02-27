@@ -1,0 +1,56 @@
+.action {
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.download-button {
+  margin: 10px;
+}
+
+.content {
+  margin: 0px 35px;
+}
+
+.leftPanel {
+  float: left;
+  width: 50%;
+}
+
+.rightPanel {
+  float: right;
+  width: 50%;
+}
+
+.title {
+  margin-left: 35px;
+  width: 90%;
+}
+
+@media (max-width: 600px) {
+  .content {
+    margin: 0px 10px;
+    text-align: center;
+  }
+
+  .mat-card-title {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .title {
+    margin-left: 10px;
+    width: 90%;
+  }
+
+  .leftPanel {
+    float: none;
+    width: 100%;
+  }
+
+  .rightPanel {
+    float: none;
+    width: 100%;
+  }
+}

@@ -1,0 +1,53 @@
+<div class="leftPanel">
+    <mat-card-title class='title'>
+        <mat-label>Team Points</mat-label>
+    </mat-card-title>
+    <br>
+    <mat-form-field class='title'>
+        <mat-label>Search Team</mat-label>
+        <input matInput type="text" (keyup)="applyFilter($event)" placeholder="Search Player">
+    </mat-form-field>
+    <div class="mat-elevation-z8 content">
+        <mat-table [dataSource]="dataSource" matSort>
+            <ng-container matColumnDef="myName">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{ row.myName }} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="teamName">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Team Name</mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{ row.teamName }} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="points">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Points</mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{ row.points | number : '1.2-2' }} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;">
+            </mat-row>
+        </mat-table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 50, 100]"></mat-paginator>
+    </div>
+
+    <div class="action">
+        <button mat-raised-button color="primary" class="download-button" (click)="downloadFileTop10()">Download
+            Top
+            10</button>
+        <button mat-raised-button color="primary" class="download-button" (click)="downloadFile()">Download
+            All</button>
+    </div>
+</div>
+<div class="rightPanel">
+    <app-player-points [players]='allPlayers'></app-player-points>
+</div>
+
+<div *ngIf='displayUpload'>
+    <input type='file' #fileImportInput name='File Upload' id='txtFileUpload' (change)='fileChangeListener($event)'
+        accept='.csv' />
+    <button mat-raised-button color="primary" (click)="reset()">Reset</button>
+</div>
+
+<button mat-button class="displayButton" (click)="displayUploadBtn()">.</button>

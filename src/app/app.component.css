@@ -1,0 +1,96 @@
+.header {
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 10px 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.header img {
+  width: 80px;
+  height: 80px;
+  float: left;
+  color: #2b7ccc;
+  text-align: center;
+  padding-left: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header img.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header h1.title {
+  color: #2b7ccc;
+  font-size: 48px;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-top: 20px;
+  margin-top: 0px;
+}
+
+.header h1 {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.app-card-selected {
+  height: 112px;
+  padding: 12px;
+  background-color: #eb5e33 !important;
+  color: #ffffff !important;
+  font-size: 36px;
+}
+
+.app-card-boarded {
+  height: 112px;
+  padding: 12px;
+  background-color: #3a7e31 !important;
+  color: #ffffff !important;
+  font-size: 36px;
+}
+
+.app-card-draft {
+  height: 112px;
+  padding: 12px;
+  background-color: #ffbf00 !important;
+  color: #ffffff !important;
+  font-size: 36px;
+}
+
+.content {
+  padding: 75px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .header {
+    overflow: hidden;
+    padding: 5px 5px;
+  }
+
+  .header img {
+    display: none;
+    padding-left: 0px;
+  }
+
+  .header h1.title {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 0px;
+  }
+
+  .header-right {
+    float: none;
+  }
+}

@@ -183,32 +183,32 @@ export class DashboardComponent implements OnInit {
     teams.map(team => {
       team.points = 0;
       // calculat owner points
-      const owner = this.ownersData.find(p => p.name === team.owner.name);
+      const owner = this.ownersData.find(p => p.name.toLowerCase() === team.owner.name.toLowerCase());
       if (owner) {
         team.points = team.points + +owner.points;
       }
 
       // calculat captain points
-      const captain = this.captainsData.find(p => p.name === team.captain.name);
+      const captain = this.captainsData.find(p => p.name.toLowerCase() === team.captain.name.toLowerCase());
       if (captain) {
         team.points = team.points + +captain.points;
       }
 
       team.players.map(tp => {
-        let player = players.find(p => p.name === tp.name);
+        let player = players.find(p => p.name.toLowerCase() === tp.name.toLowerCase());
         if (player) {
           team.points = team.points + player.points;
         }
       })
 
-      let oPlayer = players.find(p => p.name === team.owner.name);
+      let oPlayer = players.find(p => p.name.toLowerCase() === team.owner.name.toLowerCase());
       if (oPlayer) {
         team.points = team.points + oPlayer.points;
       }
 
-      let cPlayer = players.find(p => p.name === team.captain.name);
+      let cPlayer = players.find(p => p.name.toLowerCase() === team.captain.name.toLowerCase());
       if (cPlayer) {
-        team.cPlayer = team.points + cPlayer.points;
+        team.points = team.points + cPlayer.points;
       }
     });
     return this.sortArray(teams);

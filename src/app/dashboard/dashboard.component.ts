@@ -34,6 +34,8 @@ export class DashboardComponent implements OnInit {
   displayUpload = false;
   displayPoints = false;
 
+  loading = false;
+
   playerData: Player[]
   teamData: Team[] = [];
 
@@ -64,8 +66,10 @@ export class DashboardComponent implements OnInit {
 
       this.updatePoints();
     } else {
+    this.loading = true;
       this.playersService.getTeamsPoints().subscribe(
         response => {
+          this.loading = false;
           this.teamData = response;
           if (this.teamData && this.teamData.length) {
             this.dataSource = new MatTableDataSource<any>(this.teamData);
@@ -107,23 +111,37 @@ export class DashboardComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
 
-    this.playersService.addPlayertDetails(this.playerData).subscribe(
+    this.playersService.resetPlayers().subscribe(
       response => {
         console.log(JSON.parse(JSON.stringify(response)));
+        this.playersService.addPlayertDetails(this.playerData).subscribe(
+          response => {
+            console.log(JSON.parse(JSON.stringify(response)));
+          },
+          error => () => {
+            console.log('Error something went wrong in the service', error);
+          }
+        );
       },
       error => () => {
-        console.log('Error something went wrong in the service', error);
-      }
-    );
+        console.log('Error in loading player details from data store.', error);
+      });
 
-    this.playersService.addTeamsPoints(this.teamData).subscribe(
+    this.playersService.resetTeams().subscribe(
       response => {
         console.log(JSON.parse(JSON.stringify(response)));
+        this.playersService.addTeamsPoints(this.teamData).subscribe(
+          response => {
+            console.log(JSON.parse(JSON.stringify(response)));
+          },
+          error => () => {
+            console.log('Error something went wrong in the service', error);
+          }
+        );
       },
       error => () => {
-        console.log('Error something went wrong in the service', error);
-      }
-    );
+        console.log('Error in loading player details from data store.', error);
+      });
   }
 
   applyFilter(event: Event) {
@@ -431,15 +449,14 @@ export class DashboardComponent implements OnInit {
     this.playersService.resetPlayers().subscribe(
       response => {
         console.log(response);
-      },
-      error => () => {
-        console.log('Error in loading player details from data store.', error);
-      });
-
-    this.playersService.resetTeams().subscribe(
-      response => {
-        console.log(response);
-        this.updatePoints();
+        this.playersService.resetTeams().subscribe(
+          response => {
+            console.log(response);
+            this.updatePoints();
+          },
+          error => () => {
+            console.log('Error in loading player details from data store.', error);
+          });
       },
       error => () => {
         console.log('Error in loading player details from data store.', error);

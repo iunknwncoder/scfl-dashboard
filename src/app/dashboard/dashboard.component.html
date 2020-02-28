@@ -59,3 +59,7 @@
 </div>
 
 <button mat-button class="displayButton" (click)="displayUploadBtn()">.</button>
+
+<div class="center-align" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</div>

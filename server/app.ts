@@ -130,11 +130,6 @@ router.post("/addTeamPoints", (request: Request, response: Response) => {
     if (error) throw error;
     // perform actions on the collection object
     console.log('add teams');
-    client.db("budget").collection('teams').deleteMany()
-      .then(function (result) {
-        response.send(result);
-      })
-
     client.db("budget").collection('teams').insertMany(request.body)
       .then(function (result) {
         response.send(result);
@@ -147,7 +142,7 @@ router.get("/resetTeams", (request: Request, response: Response) => {
   client.connect(error => {
     if (error) throw error;
     // perform actions on the collection object
-    console.log('delete player and teams');
+    console.log('delete teams');
     client.db("budget").collection('teams').deleteMany()
       .then(function (result) {
         response.send(result);
@@ -160,8 +155,8 @@ router.get("/resetPlayers", (request: Request, response: Response) => {
   client.connect(error => {
     if (error) throw error;
     // perform actions on the collection object
-    console.log('delete player and teams');
-    client.db("budget").collection('teams').deleteMany()
+    console.log('delete players');
+    client.db("budget").collection('players').deleteMany()
       .then(function (result) {
         response.send(result);
       })

@@ -48,9 +48,6 @@ export class ScorerComponent implements OnInit {
     }
   }
   ngOnInit() {
-    this.playersService.players.subscribe(p => {
-      this.playersData = p;
-    })
   }
 
   getBattingTeamPlayers() {
@@ -61,7 +58,7 @@ export class ScorerComponent implements OnInit {
     return this.playersData.filter(p => p.team === this.bowlingTeam);
   }
 
-  checkTeams(type) {
+  checkTeams(type?) {
     if (this.battingTeam === this.bowlingTeam) {
       alert('You have selected both the same team');
 

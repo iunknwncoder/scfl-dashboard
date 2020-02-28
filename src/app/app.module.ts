@@ -5,6 +5,8 @@ import { MaterialModule } from "../material.module";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MyTeamComponent } from './my-team/my-team.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScorerComponent } from './scorer/scorer.component';
@@ -25,7 +27,9 @@ import { PlayerPointsComponent } from './dashboard/player-points/player-points.c
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpModule,
+    HttpClientModule
   ],
   providers: [{ provide: MAT_DIALOG_DATA, useValue: {} },
   { provide: MatDialogRef, useValue: {} }],

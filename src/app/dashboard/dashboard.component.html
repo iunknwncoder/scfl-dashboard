@@ -1,6 +1,14 @@
-<div class="leftPanel">
+<div class="point-button">
+    <button mat-raised-button color="primary" (click)="displayPoints = false" *ngIf="displayPoints">View Teams
+        Points
+        System</button>
+    <button mat-raised-button color="primary" (click)="displayPoints = true" *ngIf="!displayPoints">View Individual
+        Players Points
+    </button>
+</div>
+<div [hidden]="displayPoints">
     <mat-card-title class='title'>
-        <mat-label>Team Points</mat-label>
+        <mat-label>Teams Points</mat-label>
     </mat-card-title>
     <br>
     <mat-form-field class='title'>
@@ -11,7 +19,7 @@
         <mat-table [dataSource]="dataSource" matSort>
             <ng-container matColumnDef="myName">
                 <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
-                <mat-cell *matCellDef="let row"> {{ row.myName }} </mat-cell>
+                <mat-cell *matCellDef="let row"> {{ row.name }} </mat-cell>
             </ng-container>
 
             <ng-container matColumnDef="teamName">
@@ -40,7 +48,7 @@
             All</button>
     </div>
 </div>
-<div class="rightPanel">
+<div [hidden]="!displayPoints">
     <app-player-points [players]='allPlayers'></app-player-points>
 </div>
 

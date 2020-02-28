@@ -9,6 +9,7 @@ import allTeamsDetails from '../../assets/allTeams.json'
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
 import { renderFlagCheckIfStmt } from '@angular/compiler/src/render3/view/template';
+import { Player, Team, PlayersService } from '../players.service.js';
 
 @Component({
   selector: 'app-dashboard',
@@ -29,42 +30,100 @@ export class DashboardComponent implements OnInit {
   fieldingData = fielderDetails;
   allTeams = allTeamsDetails;
   allTeamsPoint = [];
-  allPlayers = []
-  displayUpload = false
+  allPlayers = [];
+  displayUpload = false;
+  displayPoints = false;
 
-  constructor() {
+  playerData: Player[]
+  teamData: Team[] = [];
+
+  constructor(public playersService: PlayersService) {
   }
 
   ngOnInit() {
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
+    if (sessionStorage.getItem('allteams') || sessionStorage.getItem('batting') || sessionStorage.getItem('bowling') || sessionStorage.getItem('fielding') || sessionStorage.getItem('owners') || sessionStorage.getItem('captains')) {
+      if (sessionStorage.getItem('batting')) {
+        this.battingData = JSON.parse(sessionStorage.getItem('batting'));
+      }
+      if (sessionStorage.getItem('bowling')) {
+        this.bowlingData = JSON.parse(sessionStorage.getItem('bowling'));
+      }
+      if (sessionStorage.getItem('fielding')) {
+        this.fieldingData = JSON.parse(sessionStorage.getItem('fielding'));
+      }
+      if (sessionStorage.getItem('owners')) {
+        this.ownersData = JSON.parse(sessionStorage.getItem('owners'));
+      }
+      if (sessionStorage.getItem('captains')) {
+        this.captainsData = JSON.parse(sessionStorage.getItem('captains'));
+      }
+      if (sessionStorage.getItem('allteams')) {
+        this.allTeams = JSON.parse(sessionStorage.getItem('allteams'));
+      }
 
-    if (sessionStorage.getItem('batting')) {
-      this.battingData = JSON.parse(sessionStorage.getItem('batting'));
-    }
-    if (sessionStorage.getItem('bowling')) {
-      this.bowlingData = JSON.parse(sessionStorage.getItem('bowling'));
-    }
-    if (sessionStorage.getItem('fielding')) {
-      this.fieldingData = JSON.parse(sessionStorage.getItem('fielding'));
-    }
-    if (sessionStorage.getItem('owners')) {
-      this.ownersData = JSON.parse(sessionStorage.getItem('owners'));
-    }
-    if (sessionStorage.getItem('captains')) {
-      this.captainsData = JSON.parse(sessionStorage.getItem('captains'));
-    }
-    if (sessionStorage.getItem('allteams')) {
-      this.allTeams = JSON.parse(sessionStorage.getItem('allteams'));
-    }
+      this.updatePoints();
+    } else {
+      this.playersService.getTeamsPoints().subscribe(
+        response => {
+          this.teamData = response;
+          if (this.teamData && this.teamData.length) {
+            this.dataSource = new MatTableDataSource<any>(this.teamData);
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
+          }
+        },
+        error => () => {
+          console.log('Error in loading team details from data store.', error);
+        });
 
+      this.playersService.getPlayerDetails().subscribe(
+        response => {
+          this.allPlayers = response;
+        },
+        error => () => {
+          console.log('Error in loading player details from data store.', error);
+        });
+    }
+  }
+
+  updatePoints() {
     this.calculateBattingPoints(this.battingData);
     this.calculateBowlingPoints(this.bowlingData);
     this.calculateFieldingPoints(this.fieldingData);
     this.allTeamsPoint = this.calculateTeamPoints(this.allTeams, this.allPlayers);
 
-    this.dataSource = new MatTableDataSource<any>(this.allTeamsPoint);
+    this.playerData = this.allPlayers;
+    this.teamData = [];
+    this.allTeamsPoint.map(t => {
+      const team = new Team();
+      team.name = t.myName;
+      team.teamName = t.teamName;
+      team.points = t.points;
+      this.teamData.push(team);
+    });
+
+    this.dataSource = new MatTableDataSource<any>(this.teamData);
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+
+    this.playersService.addPlayertDetails(this.playerData).subscribe(
+      response => {
+        console.log(JSON.parse(JSON.stringify(response)));
+      },
+      error => () => {
+        console.log('Error something went wrong in the service', error);
+      }
+    );
+
+    this.playersService.addTeamsPoints(this.teamData).subscribe(
+      response => {
+        console.log(JSON.parse(JSON.stringify(response)));
+      },
+      error => () => {
+        console.log('Error something went wrong in the service', error);
+      }
+    );
   }
 
   applyFilter(event: Event) {
@@ -301,7 +360,7 @@ export class DashboardComponent implements OnInit {
           sessionStorage.setItem('captains', JSON.stringify(this.captainsData));
         }
 
-        this.ngOnInit();
+        this.updatePoints();
       };
 
       reader.onerror = function () {
@@ -368,7 +427,23 @@ export class DashboardComponent implements OnInit {
     this.bowlingData = bowlingDetails;
     this.fieldingData = fielderDetails;
     this.allTeams = allTeamsDetails;
-    this.ngOnInit();
+
+    this.playersService.resetPlayers().subscribe(
+      response => {
+        console.log(response);
+      },
+      error => () => {
+        console.log('Error in loading player details from data store.', error);
+      });
+
+    this.playersService.resetTeams().subscribe(
+      response => {
+        console.log(response);
+        this.updatePoints();
+      },
+      error => () => {
+        console.log('Error in loading player details from data store.', error);
+      });
   }
 
   displayUploadBtn() {

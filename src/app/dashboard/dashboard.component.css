@@ -35,6 +35,10 @@
   left: -20px;
 }
 
+.point-button {
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .content {
     margin: 0px 10px;
@@ -62,10 +66,14 @@
     width: 100%;
   }
 
-  .download-button {
+  .displayButton {
     margin-bottom: 25px;
     width: 10px;
     height: 10px;
     padding: 0px !important;
+  }
+
+  .point-button {
+    margin-bottom: 20px;
   }
 }

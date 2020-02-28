@@ -18,9 +18,9 @@ threadsafe: true
 
 handlers:
 - url: /
-  static_files: dist/simeio-cricket-fantasy-league/index.html
-  upload: dist/simeio-cricket-fantasy-league/index.html
+  static_files: dist/client/index.html
+  upload: dist/client/index.html
 
 - url: /
-  static_dir: dist/simeio-cricket-fantasy-league
+  static_dir: dist/client
 # [END runtime]

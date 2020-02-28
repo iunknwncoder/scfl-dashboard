@@ -396,7 +396,7 @@ export class DashboardComponent implements OnInit {
           this.allTeams = JSON.parse(text);
           sessionStorage.setItem('allteams', JSON.stringify(this.allTeams));
         }
-        this.ngOnInit();
+        this.updatePoints();
       };
 
       reader.onerror = function () {

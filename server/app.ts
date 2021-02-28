@@ -60,38 +60,14 @@ server.listen(app.get('port'), () => {
 });
 
 router.get('/', (request: Request, response: Response) => {
-  response.send('budget api works');
-});
-
-router.get('/users', (request: Request, response: Response) => {
-  client.connect(error => {
-    if (error) throw error;
-    var query = { 'type': 'user' };
-    client.db("budget").collection('diary').find(query).toArray(function (err, result) {
-      if (err) throw err;
-      response.send(result);
-      //  client.close();
-    });
-  });
-});
-
-router.get('/services', (request: Request, response: Response) => {
-  client.connect(error => {
-    if (error) throw error;
-    var query = { 'type': 'service' };
-    client.db("budget").collection('diary').find(query).toArray(function (err, result) {
-      if (err) throw err;
-      response.send(result);
-      //  client.close();
-    });
-  });
+  response.send('api works');
 });
 
 router.get('/players', (request: Request, response: Response) => {
   client.connect(error => {
     if (error) throw error;
     // perform actions on the collection object
-    client.db("budget").collection('players').find().toArray(function (err, result) {
+    client.db("scfl").collection('players').find().toArray(function (err, result) {
       if (err) throw err;
       response.send(result);
       //  client.close();
@@ -105,35 +81,49 @@ router.post("/addPlayers", (request: Request, response: Response) => {
     if (error) throw error;
     // perform actions on the collection object
     console.log('add players');
-    client.db("budget").collection('players').insertMany(request.body)
+    client.db("scfl").collection('players').insertMany(request.body)
       .then(function (result) {
         response.send(result);
       })
   });
 });
 
-router.get('/teamPoints', (request: Request, response: Response) => {
+router.post("/addTeam", (request: Request, response: Response) => {
+  // save the payments in store and check for errors
   client.connect(error => {
     if (error) throw error;
     // perform actions on the collection object
-    client.db("budget").collection('teams').find().toArray(function (err, result) {
-      if (err) throw err;
-      response.send(result);
-      //  client.close();
-    });
+    console.log('add team');
+    client.db("scfl").collection('teams').insertOne(request.body)
+      .then(function (result) {
+        response.send(result);
+      })
   });
 });
 
-router.post("/addTeamPoints", (request: Request, response: Response) => {
+router.post("/addTeams", (request: Request, response: Response) => {
   // save the payments in store and check for errors
   client.connect(error => {
     if (error) throw error;
     // perform actions on the collection object
     console.log('add teams');
-    client.db("budget").collection('teams').insertMany(request.body)
+    client.db("scfl").collection('teams').insertMany(request.body)
       .then(function (result) {
         response.send(result);
       })
+  });
+});
+
+router.get('/getTeams', (request: Request, response: Response) => {
+  client.connect(error => {
+    if (error) throw error;
+    // perform actions on the collection object
+    console.log('get teams');
+    client.db("scfl").collection('teams').find().toArray(function (err, result) {
+      if (err) throw err;
+      response.send(result);
+      //  client.close();
+    });
   });
 });
 
@@ -143,7 +133,7 @@ router.get("/resetTeams", (request: Request, response: Response) => {
     if (error) throw error;
     // perform actions on the collection object
     console.log('delete teams');
-    client.db("budget").collection('teams').deleteMany()
+    client.db("scfl").collection('teams').deleteMany()
       .then(function (result) {
         response.send(result);
       })
@@ -156,7 +146,7 @@ router.get("/resetPlayers", (request: Request, response: Response) => {
     if (error) throw error;
     // perform actions on the collection object
     console.log('delete players');
-    client.db("budget").collection('players').deleteMany()
+    client.db("scfl").collection('players').deleteMany()
       .then(function (result) {
         response.send(result);
       })

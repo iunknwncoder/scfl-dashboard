@@ -1,65 +1,96 @@
-<div class="point-button">
-    <button mat-raised-button color="primary" (click)="displayPoints = false" *ngIf="displayPoints">View Teams
-        Points
-        System</button>
-    <button mat-raised-button color="primary" (click)="displayPoints = true" *ngIf="!displayPoints">View Individual
-        Players Points
-    </button>
-</div>
-<div [hidden]="displayPoints">
-    <mat-card-title class='title'>
-        <mat-label>Teams Points</mat-label>
-    </mat-card-title>
-    <br>
-    <mat-form-field class='title'>
-        <mat-label>Search Team</mat-label>
-        <input matInput type="text" (keyup)="applyFilter($event)" placeholder="Search Player">
-    </mat-form-field>
-    <div class="mat-elevation-z8 content">
-        <mat-table [dataSource]="dataSource" matSort>
-            <ng-container matColumnDef="myName">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
-                <mat-cell *matCellDef="let row"> {{ row.name }} </mat-cell>
-            </ng-container>
+<div class="content">
+    <div [hidden]="displayPoints">
+        <mat-card-title class='title'>
+            <mat-label>Teams Points</mat-label>
+        </mat-card-title>
+        <br>
+        <mat-form-field class='title'>
+            <mat-label>Search Team</mat-label>
+            <input matInput type="text" (keyup)="applyFilter($event)" placeholder="Search Player">
+        </mat-form-field>
+        <div class="mat-elevation-z8">
+            <mat-table [dataSource]="dataSource" multiTemplateDataRows matSort>
+                <ng-container matColumnDef="name">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+                    <mat-cell *matCellDef="let row">
+                        {{row.name}}
+                    </mat-cell>
+                </ng-container>
 
-            <ng-container matColumnDef="teamName">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Team Name</mat-header-cell>
-                <mat-cell *matCellDef="let row"> {{ row.teamName }} </mat-cell>
-            </ng-container>
+                <ng-container matColumnDef="teamName">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Team Name</mat-header-cell>
+                    <mat-cell *matCellDef="let row">
+                        {{row.teamName}}
+                    </mat-cell>
+                </ng-container>
 
-            <ng-container matColumnDef="points">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Points</mat-header-cell>
-                <mat-cell *matCellDef="let row"> {{ row.points | number : '1.2-2' }} </mat-cell>
-            </ng-container>
+                <ng-container matColumnDef="points">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Points</mat-header-cell>
+                    <mat-cell *matCellDef="let row">
+                        {{row.points | number : '1.2-2'}}
+                    </mat-cell>
+                </ng-container>
 
-            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: displayedColumns;">
-            </mat-row>
-        </mat-table>
+                <ng-container matColumnDef="expandRow">
+                    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                    <mat-cell *matCellDef="let row">
+                        <mat-icon>
+                            {{row.isExpanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}
+                        </mat-icon>
+                    </mat-cell>
+                </ng-container>
 
-        <mat-paginator [pageSizeOptions]="[5, 10, 25, 50, 100]"></mat-paginator>
+                <ng-container matColumnDef="expandedDetail">
+                    <mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+                        <div class="element-detail" [@detailExpand]="(element && element.isExpanded) ? 'expanded' : 'collapsed'">
+                            <mat-table [dataSource]="element.players" matSort>
+                                <ng-container matColumnDef="name">
+                                    <mat-header-cell *matHeaderCellDef mat-sort-header>Player Name</mat-header-cell>
+                                    <mat-cell *matCellDef="let row1">
+                                        {{row1.name}}
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="points">
+                                    <mat-header-cell *matHeaderCellDef mat-sort-header>Ponits</mat-header-cell>
+                                    <mat-cell *matCellDef="let row1">
+                                        {{row1.points | number : '1.2-2'}}
+                                    </mat-cell>
+                                </ng-container>
+                                <mat-header-row *matHeaderRowDef="displayedItemColumns"> </mat-header-row>
+                                <mat-row *matRowDef="let row1; columns: displayedItemColumns;"> </mat-row>
+                            </mat-table>
+                        </div>
+                    </mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let element; columns: displayedColumns;"
+                    (click)="element.isExpanded ? element.isExpanded = false : element.isExpanded = true">
+                </mat-row>
+                <mat-row *matRowDef="let element; columns: ['expandedDetail']" [hidden]="!element.isExpanded"></mat-row>
+            </mat-table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 25]"></mat-paginator>
+        </div>
+
+        <div class="action">
+            <button mat-raised-button color="primary" (click)="toggleScreen(true)">
+                View Individual Players Points
+            </button>
+
+            <button mat-raised-button color="primary" class="download-button" (click)="downloadFileTop10()">
+                Download Top 10
+            </button>
+
+            <button mat-raised-button color="primary" class="download-button" (click)="downloadFile()">
+                Download All
+            </button>
+        </div>
     </div>
-
-    <div class="action">
-        <button mat-raised-button color="primary" class="download-button" (click)="downloadFileTop10()">Download
-            Top
-            10</button>
-        <button mat-raised-button color="primary" class="download-button" (click)="downloadFile()">Download
-            All</button>
+    <div [hidden]="!displayPoints">
+        <app-player-points [players]='allPlayers' (toggleScreen)='toggleScreen($event)'></app-player-points>
     </div>
 </div>
-<div [hidden]="!displayPoints">
-    <app-player-points [players]='allPlayers'></app-player-points>
-</div>
-
-<div *ngIf='displayUpload'>
-    <input type='file' #fileImportInput name='File Upload' id='txtFileUpload' (change)='fileChangeListener($event)'
-        accept='.csv' />
-    <button mat-raised-button color="primary" (click)="reset()">Reset</button>
-</div>
-
-<button mat-button class="displayButton" (click)="displayUploadBtn()">.</button>
-
 <div class="center-align" *ngIf="loading">
     <mat-spinner></mat-spinner>
 </div>

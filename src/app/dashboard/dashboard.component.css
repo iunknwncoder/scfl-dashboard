@@ -8,10 +8,6 @@
   margin: 10px;
 }
 
-.content {
-  margin: 0px 35px;
-}
-
 .leftPanel {
   float: left;
   width: 50%;
@@ -23,16 +19,7 @@
 }
 
 .title {
-  margin-left: 35px;
-  width: 90%;
-}
-
-.displayButton {
-  background-color: transparent;
-  border: none;
-  position: fixed;
-  bottom: -10px;
-  left: -20px;
+  width: 100%;
 }
 
 .point-button {
@@ -44,6 +31,12 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: chocolate;
+}
+
+.element-detail {
+  width: 100% !important;
+  overflow: hidden;
 }
 
 @media (max-width: 600px) {

@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MyTeamComponent } from './my-team/my-team.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScorerComponent } from './scorer/scorer.component';
+import { AdministratorComponent } from './administrator/administrator.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 const routes: Routes = [{
   path: '',
   component: DashboardComponent
-}, {
-  path: 'myteam',
-  component: MyTeamComponent
 },
 {
   path: 'dashboard',
@@ -18,7 +16,14 @@ const routes: Routes = [{
 }, {
   path: 'scorer',
   component: ScorerComponent
-}];
+}, {
+  path: 'administrator',
+  component: AdministratorComponent
+}, {
+  path: 'registration',
+  component: RegistrationComponent
+}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

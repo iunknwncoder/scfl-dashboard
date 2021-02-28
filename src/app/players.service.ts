@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Http, Headers, RequestOptions } from '@angular/http';
+// import { Http, Headers, RequestOptions } from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { environment } from './../environments/environment'
 
 export class Player {
   name: string;
@@ -22,54 +24,44 @@ export class Team {
   providedIn: 'root'
 })
 export class PlayersService {
+  constructor(private http: HttpClient) { }
 
-  constructor(private http: Http) { }
+  getRequestHeader(): HttpHeaders {
+    // Create variable of type Header.
+    const headers = new HttpHeaders();
+    headers.set('Accept', 'application/json; charset=UTF-8');
+    headers.set('Content-Type', 'application/json; charset=UTF-8');
 
-  getPlayerDetails() {
-    return this.http.get('/api/players')
-      .map((res) => { return res.json(); })
-      .catch(this.handleError);
+    // Finally return the header object.
+    return headers;
   }
 
-  addPlayertDetails(playerDetails) {
-    const headers = new Headers({ 'Content-Type': 'application/json' });
-    const options = new RequestOptions({ headers: headers });
-    return this.http.post('/api/addPlayers', playerDetails, options)
-      .map((res) => { return res.json(); })
-      .catch(this.handleError)
+  getPlayers() {
+    return this.http.get(environment.API_URL + '/api/players');
   }
 
-  getTeamsPoints() {
-    return this.http.get('/api/teamPoints')
-      .map((res) => { return res.json(); })
-      .catch(this.handleError);
+  addPlayers(playerDetails) {
+    return this.http.post(environment.API_URL + '/api/addPlayers', playerDetails, { headers: this.getRequestHeader() });
   }
 
-  addTeamsPoints(playerDetails) {
-    const headers = new Headers({ 'Content-Type': 'application/json' });
-    const options = new RequestOptions({ headers: headers });
-    return this.http.post('/api/addTeamPoints', playerDetails, options)
-      .map((res) => { return res.json(); })
-      .catch(this.handleError)
+  addTeam(team) {
+    return this.http.post(environment.API_URL + '/api/addTeam', team, { headers: this.getRequestHeader() });
+  }
+
+  getTeams() {
+    return this.http.get(environment.API_URL + '/api/getTeams');
+  }
+
+  addTeams(teams) {
+    return this.http.post(environment.API_URL + '/api/addTeams', teams, { headers: this.getRequestHeader() });
   }
 
   resetTeams() {
-    return this.http.get('/api/resetTeams')
-      .map((res) => { return res.json(); })
-      .catch(this.handleError);
+    return this.http.get(environment.API_URL + '/api/resetTeams');
   }
 
-  
+
   resetPlayers() {
-    return this.http.get('/api/resetPlayers')
-      .map((res) => { return res.json(); })
-      .catch(this.handleError);
-  }
-
-  private handleError(error: any) {
-    let errMsg = (error.message) ? error.message :
-      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-    console.error(errMsg);
-    return errMsg;
+    return this.http.get(environment.API_URL + '/api/resetPlayers');
   }
 }

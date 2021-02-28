@@ -6,9 +6,9 @@
     <mat-label>Search Player</mat-label>
     <input matInput type="text" (keyup)="applyFilter($event)" placeholder="Search Player">
 </mat-form-field>
-<div class="mat-elevation-z8 content">
+<div class="mat-elevation-z8">
     <mat-table [dataSource]="playerDataSource" matSort>
-        <ng-container matColumnDef="myName">
+        <ng-container matColumnDef="name">
             <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{ row.name }} </mat-cell>
         </ng-container>
@@ -32,7 +32,15 @@
 </div>
 
 <div class="action">
-    <button mat-raised-button color="primary" class="download-button" (click)="downloadFileTop10()">Download Top
-        10</button>
-    <button mat-raised-button color="primary" class="download-button" (click)="downloadFile()">Download All</button>
+    <button mat-raised-button color="primary" (click)="toggle()">
+        View Teams Points System
+    </button>
+
+    <button mat-raised-button color="primary" class="download-button" (click)="downloadFileTop10()">
+        Download Top 10
+    </button>
+
+    <button mat-raised-button color="primary" class="download-button" (click)="downloadFile()">
+        Download All
+    </button>
 </div>

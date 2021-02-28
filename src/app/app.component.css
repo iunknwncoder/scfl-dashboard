@@ -2,8 +2,6 @@
   overflow: hidden;
   background-color: #ffffff;
   padding: 10px 10px;
-  justify-content: center;
-  text-align: center;
 }
 
 .header img {
@@ -12,7 +10,6 @@
   float: left;
   color: #2b7ccc;
   text-align: center;
-  padding-left: 20px;
   text-decoration: none;
   font-size: 18px;
   line-height: 25px;
@@ -20,27 +17,19 @@
 }
 
 .header img.logo {
+  margin-left: 165px;
+  margin-right: 40px;
   font-size: 25px;
   font-weight: bold;
 }
 
-.header h1.title {
+.title {
+  width: 100%;
   color: #2b7ccc;
   font-size: 48px;
   font-weight: bold;
-  padding-left: 50px;
-  padding-top: 20px;
+  padding-top: 10px;
   margin-top: 0px;
-}
-
-.header h1 {
-  float: left;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
 }
 
 .app-card-selected {
@@ -65,11 +54,6 @@
   background-color: #ffbf00 !important;
   color: #ffffff !important;
   font-size: 36px;
-}
-
-.content {
-  padding: 75px;
-  text-align: center;
 }
 
 @media (max-width: 600px) {

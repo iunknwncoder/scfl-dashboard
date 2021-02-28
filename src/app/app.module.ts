@@ -5,21 +5,24 @@ import { MaterialModule } from "../material.module";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import { MyTeamComponent } from './my-team/my-team.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScorerComponent } from './scorer/scorer.component';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { PlayerPointsComponent } from './dashboard/player-points/player-points.component';
+import { AdministratorComponent } from './administrator/administrator.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyTeamComponent,
     DashboardComponent,
     ScorerComponent,
-    PlayerPointsComponent
+    PlayerPointsComponent,
+    AdministratorComponent,
+    RegistrationComponent,
+    ConfirmationDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -28,9 +31,9 @@ import { PlayerPointsComponent } from './dashboard/player-points/player-points.c
     ReactiveFormsModule,
     AppRoutingModule,
     MaterialModule,
-    HttpModule,
     HttpClientModule
   ],
+  entryComponents: [ConfirmationDialogComponent],
   providers: [{ provide: MAT_DIALOG_DATA, useValue: {} },
   { provide: MatDialogRef, useValue: {} }],
   bootstrap: [AppComponent]

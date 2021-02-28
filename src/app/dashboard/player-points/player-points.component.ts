@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, OnChanges, Output, EventEmitter } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
@@ -10,7 +10,9 @@ import pdfFonts from 'pdfmake/build/vfs_fonts';
 })
 export class PlayerPointsComponent implements OnChanges {
   @Input() players;
-  displayedColumns: string[] = ['myName', 'teamName', 'points'];
+  @Output() toggleScreen: EventEmitter<any> = new EventEmitter<any>();
+
+  displayedColumns: string[] = ['name', 'teamName', 'points'];
   playerDataSource: MatTableDataSource<any>;
   @ViewChild(MatPaginator, { static: true }) playerPaginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) playerSort: MatSort;
@@ -21,6 +23,10 @@ export class PlayerPointsComponent implements OnChanges {
     this.playerDataSource = new MatTableDataSource<any>(this.sortArray(this.players));
     this.playerDataSource.paginator = this.playerPaginator;
     this.playerDataSource.sort = this.playerSort;
+  }
+
+  toggle() {
+    this.toggleScreen.emit(false);
   }
 
   applyFilter(event: Event) {

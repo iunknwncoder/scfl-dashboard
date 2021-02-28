@@ -1,0 +1,158 @@
+<mat-card-content class="mat-elevation-z8 pswdDiv" *ngIf="!isValidUser">
+    <input matInput type="password" class="pswdInput" [(ngModel)]="password" placeholder=" Enter Password">
+    <br />
+    <button mat-raised-button color="primary" class="mt-20" [disabled]="password === ''" (click)="validateAdmin()">
+        Submit
+    </button>
+</mat-card-content>
+
+<mat-card class="content" *ngIf="isValidUser">
+    <mat-card-content class="mat-elevation-z8 card-content">
+        <mat-table [dataSource]="ownerDataSource" matSort>
+
+            <ng-container matColumnDef="team">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Team</mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{ row.team }} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Owner Name</mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{ row.name }} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="league">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>League Match</mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <input class="inputBox" [(ngModel)]="row.league" type="number" matInput> <span
+                        class="disabledSpan">* 8</span>
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="runnerUp">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Final Runner Up</mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <input class="inputBox" [(ngModel)]="row.runnerUp" type="number" matInput> <span
+                        class="disabledSpan">* 8</span>
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="finalist">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Final Match</mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <input class="inputBox" [(ngModel)]="row.finalist" type="number" matInput> <span
+                        class="disabledSpan">* 15</span>
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="totalPoints">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Total Points</mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{ (row.league * 8 + row.runnerUp * 8 + row.finalist * 15) }}
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;">
+            </mat-row>
+        </mat-table>
+    </mat-card-content>
+
+    <mat-card-content class="mat-elevation-z8 card-content">
+        <mat-table [dataSource]="captainDataSource" matSort>
+
+            <ng-container matColumnDef="team">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Team</mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{ row.team }} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Captain Name</mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{ row.name }} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="league">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>League Match</mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <input class="inputBox" [(ngModel)]="row.league" type="number" matInput><span class="disabledSpan">*
+                        8</span>
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="runnerUp">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Final Runner Up</mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <input class="inputBox" [(ngModel)]="row.runnerUp" type="number" matInput><span
+                        class="disabledSpan">* 8</span>
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="finalist">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Final Match</mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <input class="inputBox" [(ngModel)]="row.finalist" type="number" matInput><span
+                        class="disabledSpan">* 15</span>
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="totalPoints">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Total Points</mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{ (row.league * 8 + row.runnerUp * 8 + row.finalist * 15) }}
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;">
+            </mat-row>
+            <mat-row *matNoDataRow>
+                <mat-cell colspan="5">No data</mat-cell>
+            </mat-row>
+        </mat-table>
+    </mat-card-content>
+
+    <mat-card-content class="mat-elevation-z8 card-content">
+        <div>
+            <mat-label>
+                Click Upload Files button to select the file >>>>>
+            </mat-label>
+
+            <input type="file" id="fileUpload" name="fileUpload" (change)="fileChangeListener($event)"
+                style="display:none;" multiple />
+
+            <button mat-raised-button color="primary" [disabled]="loading" (click)="uploadFiles()">Upload Files</button>
+        </div>
+
+        <div class="uploadedFile" *ngFor="let file of files" [@fadeInOut]="file.state">
+            <mat-label class="mt-20">
+                {{file.name}}
+            </mat-label>
+            <button mat-raised-button color="accent" class="float-right" (click)="deleteFile(file)">Remove</button>
+        </div>
+
+        <div class="actionDiv">
+            <button mat-raised-button color="primary" class="float-left" [disabled]="!isValidPointFile || loading"
+                (click)="updatePoints()"> Update Points
+            </button>
+
+            <button mat-raised-button color="primary" class="float-left" [disabled]="!isValidPlayersFile || loading"
+                (click)="submitFile()"> Add Players
+            </button>
+
+            <button mat-raised-button color="primary" class="float-left" [disabled]="!isValidTeamFile || loading"
+                (click)="submitFile()">Add Teams
+            </button>
+
+            <button mat-raised-button color="warn" class="float-right" [disabled]="loading" (click)="resetPlayers()">
+                Delete Players </button>
+
+            <button mat-raised-button color="warn" class="float-right" [disabled]="loading" (click)="resetTeams()">
+                Detele Teams </button>
+
+            <button mat-raised-button color="warn" class="float-right" [disabled]="loading" (click)="resetPoints()">
+                Reset Points
+            </button>
+        </div>
+        <br />
+    </mat-card-content>
+</mat-card>
+<div class="center-align" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</div>

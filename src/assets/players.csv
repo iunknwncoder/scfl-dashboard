@@ -1,0 +1,123 @@
+﻿name,team,isOwner,isCaptain,gender,cost
+Arjun Dev,Simeio Spirits,1,0,M,0
+Jisson Jose,Daredevils,1,0,M,0
+Vivek Purekar,TNT,1,0,M,0
+Balachandra Gopal,Roaring Lions,1,0,M,0
+Marirajan K,Skarp Elva,1,0,M,0
+Sumukh M,Simeio Spirits,0,1,M,0
+Vinayak Kammar,Daredevils,0,1,M,0
+Pratith Shetty,TNT,0,1,M,0
+Rajeshkumar R,Roaring Lions,0,1,M,0
+Tushar Gupta,Skarp Elva,0,1,M,0
+Sujith J,Daredevils,0,0,M,13.75
+Harsh Upadhyay,The Assassinators,0,0,M,12
+Kotesh Dundigala,Daredevils,0,0,M,10.12
+Hemanth N,TNT,0,0,M,9
+Indranil Biswas,Ninjas,0,0,M,9
+Chakrapani Adepu,Hotshots,0,0,M,8.5
+Phanindra Polisetti,Spirits,0,0,M,8.5
+Mohammad Irfan,Spirits,0,0,M,8
+Ritesh K.,TNT,0,0,M,8
+Prasanna G.,Ninjas,0,0,M,8
+Ajay Gupta,Roaring Lions,0,0,M,7.5
+Pranav Ghate,TNT,0,0,M,6.1
+Kartheek Jagadisan,Hotshots,0,0,M,6
+Praveen Reddy Palvai,Skarp Elva,0,0,M,5.5
+Sanya Goswami,Hotshots,0,0,F,4.5
+Kushal G V,Hotshots,0,0,M,4.5
+Jayanta Roy,Skarp Elva,0,0,M,4.5
+Muhammed Junaid,Skarp Elva,0,0,M,4.1
+Sweekrithy S.,Spirits,0,0,F,4
+Priyanka K.,Ninjas,0,0,F,4
+Shrikant Ware,The Assassinators,0,0,M,4
+Rakshith S,Daredevils,0,0,M,3.9
+Vivek Kumar,Roaring Lions,0,0,M,3.8
+Rudra Basu,Roaring Lions,0,0,M,3.3
+Shahnawaz Ahmad,Roaring Lions,0,0,M,3.2
+Sailesh Beera,Ninjas,0,0,M,3
+Nelson Illur,Skarp Elva,0,0,M,3
+Kiran Ramesh Kumar,Roaring Lions,0,0,M,2.8
+Rajesh Kumar R,Roaring Lions,0,0,M,2.8
+Nishanth Rajanna,Skarp Elva,0,0,M,2.8
+Ratish Panicker,Roaring Lions,0,0,M,2.4
+Sakshi Shukla,The Assassinators,0,0,F,2.4
+Mohd Imdad,The Assassinators,0,0,M,2.3
+Sajid Shaikh,Spirits,0,0,M,2.2
+Laxminarayan Ramamoorthy,The Assassinators,0,0,M,2.2
+Avinash Radhakrishnan,Hotshots,0,0,M,2.1
+Manisha Chandu,The Assassinators,0,0,F,2
+Vemana Siva Rajesh,Roaring Lions,0,0,M,1.9
+Varsha Hrishikesh,TNT,0,0,F,1.9
+Tagore Pasam,Skarp Elva,0,0,M,1.9
+Nayanava Biswas,Skarp Elva,0,0,M,1.9
+Sowmya M,TNT,0,0,F,1.2
+Santhosh Sankaran,Ninjas,0,0,M,1.2
+Baby Shamili,Skarp Elva,0,0,F,1.2
+Samyajith Madhusoodana,Spirits,0,0,M,1.2
+Shreya Biswas,Skarp Elva,0,0,F,1.2
+Nikita Sara Sunil,Spirits,0,0,F,1.2
+Rahul Godha,Spirits,0,0,M,1.2
+Jatin Chauhan,Skarp Elva,0,0,M,1.2
+Rehaman Shaik,Hotshots,0,0,M,1.2
+Rajasekhar Ramamurthy,Spirits,0,0,M,1.2
+Ronit Asrani,TNT,0,0,M,1.2
+Sai Giri Cholla,Ninjas,0,0,M,1.2
+Rohit Raj,Skarp Elva,0,0,M,1.2
+Pankaj Kumar,Spirits,0,0,M,0.99
+Gururaj Bhat,Roaring Lions,0,0,M,0.99
+Vaibhav Kumar,Skarp Elva,0,0,M,0.99
+Smirna Kushal,Skarp Elva,0,0,F,0.99
+Dinesh Babu Dhanasekaran,Ninjas,0,0,M,0.99
+Akulapalli Dileep Kumar,The Assassinators,0,0,M,0.99
+Govardhana Gopalakrishna,The Assassinators,0,0,M,0.99
+Adarsh Adinarayanamurthy,TNT,0,0,M,0.99
+Arjula Sundeep,The Assassinators,0,0,M,0.99
+Kaustubh Kiran Kulkarni,Hotshots,0,0,M,0.99
+Anup Sasidharan Menon,Ninjas,0,0,M,0.99
+Pranaya,Daredevils,0,0,F,0.99
+Bhajaman Samal,Hotshots,0,0,M,0.99
+Sneha Ravichandran,TNT,0,0,F,0.99
+Dhananjaya Rao,The Assassinators,0,0,M,0.99
+Avanish S Mishra,Hotshots,0,0,M,0.99
+Srinivas Raju G,Ninjas,0,0,M,0.99
+Srujana R Reddy,The Assassinators,0,0,F,0.99
+Sashikanth Elluri,Spirits,0,0,M,0.99
+Senthilnathan Ravi,The Assassinators,0,0,M,0.99
+Jaganmohan B C,Spirits,0,0,M,0.99
+Nishant Gaurav,Ninjas,0,0,M,0.54
+Dileep kumar Tiwari,The Assassinators,0,0,M,0.54
+Madan Vijayakumar,TNT,0,0,M,0.54
+Sumanth Vankadara,Hotshots,0,0,M,0.54
+VenkataReddy Kallam,The Assassinators,0,0,M,0.54
+Ranjith Jayaramaiah,Roaring Lions,0,0,M,0.54
+Anuraag Shrinivas Bhujang,Spirits,0,0,M,0.54
+Swathi Shankar,Daredevils,0,0,F,0.54
+Pooja Rudrya,Daredevils,0,0,F,0.54
+Hemanth Raj,Daredevils,0,0,M,0.54
+Ashok Regula,TNT,0,0,M,0.54
+Amirthana Ramalingam,Roaring Lions,0,0,F,0.54
+Krishna Tanniru,Spirits,0,0,M,0.54
+Suresh Kinthada,TNT,0,0,M,0.54
+Akash Kumar,Skarp Elva,0,0,M,0.54
+Rakesh avvari,Ninjas,0,0,M,0.54
+Megha Ashok Chinchole,Spirits,0,0,F,0.54
+Rohit Ranjan,Roaring Lions,0,0,M,0.54
+Kishan Kumar Sain,TNT,0,0,M,0.54
+Archana Prabhakar Mallick,Hotshots,0,0,F,0.54
+Richa Kumari,Roaring Lions,0,0,F,0.54
+Deepak Singh,TNT,0,0,M,0.54
+Gunasundari Anandan,Hotshots,0,0,F,0.54
+Sudheer Subrahmanyam Kaneti,Hotshots,0,0,M,0.54
+Manisha Basannavar,Daredevils,0,0,F,0.54
+Mahammad Fayiz,Ninjas,0,0,M,0.54
+Sammedh,Daredevils,0,0,M,0.54
+Mancy Thomas,Spirits,0,0,F,0.54
+Kamesh Pinaka,Daredevils,0,0,M,0.54
+Pabitra Borah,Daredevils,0,0,M,0.54
+Phanindra Davuluri,Daredevils,0,0,M,0.54
+Thanmayee V Subban,Daredevils,0,0,F,0.54
+Krishna Reddy,Daredevils,0,0,M,0.54
+Manjunath Babu Kobal,TNT,0,0,M,0.54
+Pallavi G,Roaring Lions,0,0,F,0.54
+Vasudha Jagadeesh,Ninjas,0,0,F,0.54
+Poulomi Bhaduri,Ninjas,0,0,F,0.54

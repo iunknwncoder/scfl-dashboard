@@ -1,0 +1,111 @@
+player_id,name,team_id,team_name,total_match,innings,total_runs,highest_run,average,not_out,strike_rate,ball_faced,batting_hand,4s,6s,50s,100s
+2624920,Nelson Illur,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,3,134,102,67.00,1,231.03,58,RHB,11,12,0,1
+3923385,Chakra,597865,HotShots - SCL2020,3,3,82,57,27.33,0,146.43,56,RHB,5,6,1,0
+4155940,Harsh Upadhyay,597869,The Assassinators - SCL2020,4,4,79,44,26.33,1,138.60,57,RHB,9,3,0,0
+4108919,Arjun Dev,597863,Simeio Spirits - SCL2020,4,4,77,46,25.67,1,163.83,47,RHB,11,1,0,0
+4193986,Kiran Kumar,597866,Roaring Lions - SCL2020,3,3,70,52,35.00,1,166.67,42,RHB,7,4,1,0
+4115413,Prasanna Ganiga,597859,Simeio Ninjas - SCL2020,3,3,68,34,22.67,0,130.77,52,RHB,5,2,0,0
+4102457,Mohd Imdad,597869,The Assassinators - SCL2020,4,3,67,29,67.00,2,121.82,55,RHB,6,3,0,0
+4197038,Ritesh Kumar,597864,TNT - SCL2020,3,3,57,41,28.50,1,196.55,29,RHB,2,6,0,0
+4162071,Mohammad Irfan Alam,597863,Simeio Spirits - SCL2020,4,4,52,32,17.33,1,101.96,51,RHB,6,2,0,0
+3910031,Adarsh Kulkarni,597859,Simeio Ninjas - SCL2020,3,3,50,37,25.00,1,142.86,35,RHB,4,0,0,0
+4114587,Sujith K J,597855,DareDevils - SCL2020,3,3,46,25,15.33,0,131.43,35,RHB,5,2,0,0
+4185986,Jisson Jose,597855,DareDevils - SCL2020,3,3,39,21,13.00,0,105.41,37,RHB,4,1,0,0
+4189087,Praveen Reddy Palvai,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,3,35,17,17.50,1,83.33,42,RHB,0,0,0,0
+4116400,Sumukh M,597863,Simeio Spirits - SCL2020,4,3,35,30,35.00,2,145.83,24,RHB,3,2,0,0
+4102035,Indranil Biswas,597859,Simeio Ninjas - SCL2020,2,2,34,23,34.00,1,212.50,16,LHB,4,2,0,0
+4166378,Sanjay Pagar,597865,HotShots - SCL2020,3,3,32,19,10.67,0,80.00,40,RHB,2,0,0,0
+4187015,Akulapalli Dileep,597869,The Assassinators - SCL2020,4,3,31,31,10.33,0,119.23,26,RHB,3,1,0,0
+4104358,Rudra Basu,597866,Roaring Lions - SCL2020,3,3,30,15,15.00,1,103.45,29,RHB,2,0,0,0
+4202601,Pratith Shetty,597864,TNT - SCL2020,3,3,30,13,15.00,1,93.75,32,RHB,1,1,0,0
+4171737,Sweekrithy Suresh,597863,Simeio Spirits - SCL2020,4,4,30,20,15.00,2,107.14,28,RHB,2,2,0,0
+3914716,Vinayak Kammar,597855,DareDevils - SCL2020,3,3,28,11,14.00,1,116.67,24,RHB,2,2,0,0
+4198196,Jayanta Roy,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,2,27,26,13.50,0,168.75,16,RHB,6,0,0,0
+4559295,Kumar Gaurav Raj,597855,DareDevils - SCL2020,3,2,25,15,-,2,78.13,32,RHB,1,0,0,0
+2096878,Anuraag B,597863,Simeio Spirits - SCL2020,4,3,25,20,12.50,1,119.05,21,RHB,3,0,0,0
+4116784,Kinthada Suresh,597864,TNT - SCL2020,3,3,23,13,7.67,0,85.19,27,RHB,2,0,0,0
+4105406,Vivek Kumar,597866,Roaring Lions - SCL2020,3,3,20,10,10.00,1,90.91,22,RHB,2,0,0,0
+4176680,Kartheek J,597865,HotShots - SCL2020,3,3,20,15,6.67,0,86.96,23,RHB,2,0,0,0
+4581634,Ratish Ravindra Panicker,597866,Roaring Lions - SCL2020,2,1,18,18,-,1,100.00,18,RHB,1,0,0,0
+4971968,Ronit Asrani,597864,TNT - SCL2020,3,2,17,16,17.00,1,94.44,18,RHB,1,0,0,0
+4184436,Kaustubh Kulkarni,597865,HotShots - SCL2020,3,3,15,10,15.00,2,107.14,14,RHB,2,0,0,0
+1147450,Muhammed Junaid,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,2,14,9,14.00,1,116.67,12,RHB,1,1,0,0
+3916130,Sharanabasawa Sonar,597865,HotShots - SCL2020,3,3,14,6,4.67,0,116.67,12,LHB,2,0,0,0
+4157477,P Phanindra,597863,Simeio Spirits - SCL2020,4,3,14,7,4.67,0,107.69,13,RHB,2,0,0,0
+4448652,Sakshi Shukla,597869,The Assassinators - SCL2020,4,4,14,8,-,4,87.50,16,RHB,3,0,0,0
+4190460,Chandrasekar R,597869,The Assassinators - SCL2020,3,1,12,12,-,1,200.00,6,RHB,1,1,0,0
+4191784,Nishant Gaurav,597859,Simeio Ninjas - SCL2020,2,2,12,9,12.00,1,50.00,24,LHB,0,0,0,0
+4102873,Sailesh Beera,597859,Simeio Ninjas - SCL2020,3,2,11,10,11.00,1,78.57,14,RHB,1,0,0,0
+3909342,Pranav Ghate,597864,TNT - SCL2020,3,2,11,9,5.50,0,110.00,10,RHB,0,1,0,0
+4580319,Richa Kumari,597866,Roaring Lions - SCL2020,3,3,11,10,5.50,1,122.22,9,RHB,1,1,0,0
+4105128,Rajeshkumar R,597866,Roaring Lions - SCL2020,3,3,11,8,5.50,1,84.62,13,RHB,0,0,0,0
+4102955,Senthilnathan Ravi,597869,The Assassinators - SCL2020,4,1,10,10,10.00,0,250.00,4,-,1,1,0,0
+3814619,Bharath,597869,The Assassinators - SCL2020,4,1,10,10,-,1,125.00,8,RHB,1,0,0,0
+4183340,Pravisha Jeswin,597859,Simeio Ninjas - SCL2020,3,3,10,10,5.00,1,76.92,13,RHB,1,1,0,0
+4171366,Manisha Chandu,597869,The Assassinators - SCL2020,4,4,10,6,10.00,3,38.46,26,RHB,1,0,0,0
+4169626,Kumar Vaibhav,597867,Skarp Elva(Sharp Eleven) - SCL2020,2,1,9,9,9.00,0,150.00,6,RHB,1,0,0,0
+4449354,Balachandran Gopal,597866,Roaring Lions - SCL2020,2,1,9,9,9.00,0,100.00,9,RHB,1,0,0,0
+4200570,Nikita Sara Sunil,597863,Simeio Spirits - SCL2020,2,2,8,7,4.00,0,88.89,9,RHB,0,1,0,0
+4162301,Ajay Gupta,597866,Roaring Lions - SCL2020,3,2,8,7,8.00,1,80.00,10,RHB,0,0,0,0
+4582843,Narayan RL,597869,The Assassinators - SCL2020,3,2,8,5,-,2,88.89,9,LHB,1,0,0,0
+4587481,Pankaj,597863,Simeio Spirits - SCL2020,4,2,8,5,4.00,0,53.33,15,RHB,0,0,0,0
+3910184,Kushal G.v,597865,HotShots - SCL2020,3,3,8,8,8.00,2,114.29,7,RHB,0,1,0,0
+4169288,Shahnawaz A,597866,Roaring Lions - SCL2020,2,1,7,7,-,1,175.00,4,RHB,0,1,0,0
+4102045,Dinesh Babu,597859,Simeio Ninjas - SCL2020,3,2,7,5,7.00,1,116.67,6,RHB,1,0,0,0
+4155113,Hemanth V N,597864,TNT - SCL2020,3,2,7,4,3.50,0,63.64,11,RHB,1,0,0,0
+4106757,Kamesh Pinaka,597855,DareDevils - SCL2020,3,2,7,5,-,2,53.85,13,RHB,0,0,0,0
+4179140,Varsha Hrishikesh ,597864,TNT - SCL2020,3,3,7,4,3.50,1,77.78,9,RHB,1,0,0,0
+4116738,Rakshith Vasisht,597855,DareDevils - SCL2020,3,3,7,4,3.50,1,38.89,18,RHB,0,0,0,0
+4162116,Mahammad Fayiz,597859,Simeio Ninjas - SCL2020,3,1,6,6,6.00,0,200.00,3,RHB,1,0,0,0
+4183073,Amirthana Ramalingam,597866,Roaring Lions - SCL2020,3,3,6,5,3.00,1,46.15,13,RHB,1,0,0,0
+4102523,Sumanth V,597865,HotShots - SCL2020,3,3,6,6,2.00,0,120.00,5,RHB,1,0,0,0
+4118212,Nishanth S R,597867,Skarp Elva(Sharp Eleven) - SCL2020,2,1,5,5,5.00,0,83.33,6,RHB,1,0,0,0
+4105864,Sashikanth Chowdary,597863,Simeio Spirits - SCL2020,3,2,5,5,5.00,1,38.46,13,RHB,0,0,0,0
+4102133,Rayapati Pranaya Sree,597855,DareDevils - SCL2020,3,3,5,4,5.00,2,35.71,14,RHB,1,0,0,0
+4105553,Sajid,597863,Simeio Spirits - SCL2020,3,1,4,4,4.00,0,30.77,13,RHB,0,0,0,0
+4185978,Siva Rajesh,597866,Roaring Lions - SCL2020,2,2,4,4,2.00,0,133.33,3,RHB,1,0,0,0
+4197374,Smirna Kushal,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,3,4,4,2.00,1,33.33,12,RHB,1,0,0,0
+4584313,Gururaj Bhat,597866,Roaring Lions - SCL2020,1,1,3,3,3.00,0,37.50,8,RHB,0,0,0,0
+4196653,Rehaman Shaik,597865,HotShots - SCL2020,1,1,3,3,-,1,42.86,7,RHB,0,0,0,0
+4113526,Tushar Gupta,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,2,3,2,1.50,0,75.00,4,RHB,0,0,0,0
+4450184,Rahul Goud Godha ,597863,Simeio Spirits - SCL2020,1,1,2,2,2.00,0,66.67,3,RHB,0,0,0,0
+4176615,Madan,597864,TNT - SCL2020,1,1,2,2,2.00,0,50.00,4,RHB,0,0,0,0
+4114814,Shrikant Ware,597869,The Assassinators - SCL2020,4,1,2,2,-,1,22.22,9,RHB,0,0,0,0
+4182873,Sowmya Sai,597864,TNT - SCL2020,3,3,2,1,2.00,2,22.22,9,RHB,0,0,0,0
+4451569,Gunasundari Anandan,597865,HotShots - SCL2020,3,3,2,2,1.00,1,25.00,8,RHB,0,0,0,0
+4161488,Tagore Pasam,597867,Skarp Elva(Sharp Eleven) - SCL2020,1,1,1,1,-,1,100.00,1,-,0,0,0,0
+4588366,Mancy Thomas,597863,Simeio Spirits - SCL2020,1,1,1,1,-,1,14.29,7,RHB,0,0,0,0
+4199083,Mrinal Thakur,597866,Roaring Lions - SCL2020,3,1,1,1,1.00,0,50.00,2,RHB,0,0,0,0
+4165576,Avinash Radhakrishnan,597865,HotShots - SCL2020,3,1,1,1,1.00,0,33.33,3,RHB,0,0,0,0
+4105051,Rohit Raj,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,1,1,1,1.00,0,16.67,6,RHB,0,0,0,0
+4114197,Shamili Gowda,597867,Skarp Elva(Sharp Eleven) - SCL2020,2,2,1,1,1.00,1,16.67,6,RHB,0,0,0,0
+4169989,Sanya Goswami,597865,HotShots - SCL2020,2,2,1,1,0.50,0,14.29,7,RHB,0,0,0,0
+4176292,Santhosh S,597859,Simeio Ninjas - SCL2020,3,2,1,1,0.50,0,16.67,6,RHB,0,0,0,0
+4174768,Kumar Akash,597867,Skarp Elva(Sharp Eleven) - SCL2020,1,1,0,0,-,0,0.00,4,-,0,0,0,0
+4155575,Manisha S Basannavar,597855,DareDevils - SCL2020,1,1,0,0,-,0,0.00,1,RHB,0,0,0,0
+4199766,Archana  Mallick,597865,HotShots - SCL2020,1,1,0,0,-,0,0.00,1,RHB,0,0,0,0
+4202338,Megha Chinchole,597863,Simeio Spirits - SCL2020,1,1,0,0,-,1,0.00,1,RHB,0,0,0,0
+4173319,BHAJAMAN SAMAL,597865,HotShots - SCL2020,1,1,0,0,-,0,0.00,2,RHB,0,0,0,0
+4453891,Shreya Biswas,597867,Skarp Elva(Sharp Eleven) - SCL2020,1,1,0,0,-,0,0,0,RHB,0,0,0,0
+4466126,Amruta Gawde,597859,Simeio Ninjas - SCL2020,2,1,0,0,-,1,0.00,2,RHB,0,0,0,0
+4174358,Srinivas Raju G,597859,Simeio Ninjas - SCL2020,2,1,0,0,-,1,0.00,1,RHB,0,0,0,0
+4172073,Marirajan,597867,Skarp Elva(Sharp Eleven) - SCL2020,2,1,0,0,-,1,0,0,RHB,0,0,0,0
+4162331,Deepak Singh,597864,TNT - SCL2020,3,1,0,0,-,0,0.00,1,RHB,0,0,0,0
+4451056,Vasudha KJ,597859,Simeio Ninjas - SCL2020,2,2,0,0,-,0,0.00,8,RHB,0,0,0,0
+4566592,Swathi Shankar,597855,DareDevils - SCL2020,2,2,0,0,-,1,0.00,5,RHB,0,0,0,0
+3914700,Adarsh A,597864,TNT - SCL2020,2,2,0,0,-,2,0,0,RHB,0,0,0,0
+4105142,Samyajith M,597863,Simeio Spirits - SCL2020,3,2,0,0,-,0,0.00,2,RHB,0,0,0,0
+4179803,Nayanava Biswas,597867,Skarp Elva(Sharp Eleven) - SCL2020,1,0,0,0,-,0,0,0,LHB,0,0,0,0
+4182851,Pabitra Borah,597855,DareDevils - SCL2020,1,0,0,0,-,0,0,0,-,0,0,0,0
+4118218,RAKESH AVVARI,597859,Simeio Ninjas - SCL2020,1,0,0,0,-,0,0,0,RHB,0,0,0,0
+4160647,Govardhan G,597869,The Assassinators - SCL2020,1,0,0,0,-,0,0,0,-,0,0,0,0
+4161200,Avanish Mishra,597865,HotShots - SCL2020,1,0,0,0,-,0,0,0,-,0,0,0,0
+4162356,Venkat Kallam,597869,The Assassinators - SCL2020,1,0,0,0,-,0,0,0,-,0,0,0,0
+4203982,Manjunath Kobal,597864,TNT - SCL2020,1,0,0,0,-,0,0,0,RHB,0,0,0,0
+4172792,Dileep Kumar Tiwari,597869,The Assassinators - SCL2020,1,0,0,0,-,0,0,0,RHB,0,0,0,0
+4104057,Sammedh Upadhye,597855,DareDevils - SCL2020,2,0,0,0,-,0,0,0,-,0,0,0,0
+4163956,Ashok Regula,597864,TNT - SCL2020,2,0,0,0,-,0,0,0,-,0,0,0,0
+4110590,Rajasekhar Ramamurthy,597863,Simeio Spirits - SCL2020,2,0,0,0,-,0,0,0,RHB,0,0,0,0
+4575108,HEMANTH RAJ G B,597855,DareDevils - SCL2020,3,0,0,0,-,0,0,0,RHB,0,0,0,0
+4199125,Phani D,597855,DareDevils - SCL2020,3,0,0,0,-,0,0,0,-,0,0,0,0
+4173660,Arjula Sundeep,597869,The Assassinators - SCL2020,3,0,0,0,-,0,0,0,RHB,0,0,0,0

@@ -1,0 +1,111 @@
+player_id,name,team_id,team_name,total_match,catches,caught_behind,run_outs,assist_run_outs,stumpings,caught_and_bowl,total_catches,total_dismissal
+4176680,Kartheek J,597865,HotShots - SCL2020,3,2,6,1,1,0,0,8,9
+3814619,Bharath,597869,The Assassinators - SCL2020,4,1,6,1,0,1,0,7,9
+4108919,Arjun Dev,597863,Simeio Spirits - SCL2020,4,5,1,1,0,0,0,6,7
+2624920,Nelson Illur,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,2,1,2,1,1,0,3,6
+4193986,Kiran Kumar,597866,Roaring Lions - SCL2020,3,5,0,0,0,0,0,5,5
+4114587,Sujith K J,597855,DareDevils - SCL2020,3,3,0,1,0,0,0,3,4
+3909342,Pranav Ghate,597864,TNT - SCL2020,3,1,3,0,1,0,0,4,4
+4104358,Rudra Basu,597866,Roaring Lions - SCL2020,3,2,2,0,1,0,0,4,4
+4113526,Tushar Gupta,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,3,0,1,0,0,0,3,4
+4114814,Shrikant Ware,597869,The Assassinators - SCL2020,4,0,3,1,0,0,0,3,4
+4157477,P Phanindra,597863,Simeio Spirits - SCL2020,4,3,0,1,0,0,0,3,4
+3923385,Chakra,597865,HotShots - SCL2020,3,1,0,0,0,0,2,3,3
+4197038,Ritesh Kumar,597864,TNT - SCL2020,3,2,0,1,0,0,0,2,3
+4102457,Mohd Imdad,597869,The Assassinators - SCL2020,4,3,0,0,0,0,0,3,3
+4102873,Sailesh Beera,597859,Simeio Ninjas - SCL2020,3,1,0,1,0,0,0,1,2
+4115413,Prasanna Ganiga,597859,Simeio Ninjas - SCL2020,3,1,0,1,0,0,0,1,2
+4105142,Samyajith M,597863,Simeio Spirits - SCL2020,3,2,0,0,0,0,0,2,2
+4202601,Pratith Shetty,597864,TNT - SCL2020,3,2,0,0,0,0,0,2,2
+4155940,Harsh Upadhyay,597869,The Assassinators - SCL2020,4,2,0,0,1,0,0,2,2
+4116400,Sumukh M,597863,Simeio Spirits - SCL2020,4,2,0,0,0,0,0,2,2
+4118212,Nishanth S R,597867,Skarp Elva(Sharp Eleven) - SCL2020,2,0,0,0,0,1,0,0,1
+4449354,Balachandran Gopal,597866,Roaring Lions - SCL2020,2,0,0,1,0,0,0,0,1
+4581634,Ratish Ravindra Panicker,597866,Roaring Lions - SCL2020,2,1,0,0,0,0,0,1,1
+3914700,Adarsh A,597864,TNT - SCL2020,2,1,0,0,0,0,0,1,1
+4110590,Rajasekhar Ramamurthy,597863,Simeio Spirits - SCL2020,2,1,0,0,0,0,0,1,1
+4102035,Indranil Biswas,597859,Simeio Ninjas - SCL2020,2,0,1,0,1,0,0,1,1
+4172073,Marirajan,597867,Skarp Elva(Sharp Eleven) - SCL2020,2,0,0,0,0,0,1,1,1
+1147450,Muhammed Junaid,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,0,0,1,0,0,0,0,1
+3910031,Adarsh Kulkarni,597859,Simeio Ninjas - SCL2020,3,1,0,0,0,0,0,1,1
+4166378,Sanjay Pagar,597865,HotShots - SCL2020,3,0,0,1,0,0,0,0,1
+4105128,Rajeshkumar R,597866,Roaring Lions - SCL2020,3,1,0,0,0,0,0,1,1
+4184436,Kaustubh Kulkarni,597865,HotShots - SCL2020,3,1,0,0,0,0,0,1,1
+4190460,Chandrasekar R,597869,The Assassinators - SCL2020,3,1,0,0,0,0,0,1,1
+4102523,Sumanth V,597865,HotShots - SCL2020,3,1,0,0,0,0,0,1,1
+4116784,Kinthada Suresh,597864,TNT - SCL2020,3,1,0,0,0,0,0,1,1
+4165576,Avinash Radhakrishnan,597865,HotShots - SCL2020,3,1,0,0,1,0,0,1,1
+4105051,Rohit Raj,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,1,0,0,1,0,0,1,1
+4183340,Pravisha Jeswin,597859,Simeio Ninjas - SCL2020,3,0,0,1,0,0,0,0,1
+3916130,Sharanabasawa Sonar,597865,HotShots - SCL2020,3,0,0,1,0,0,0,0,1
+4105864,Sashikanth Chowdary,597863,Simeio Spirits - SCL2020,3,1,0,0,0,0,0,1,1
+4116738,Rakshith Vasisht,597855,DareDevils - SCL2020,3,0,0,0,0,0,1,1,1
+4183073,Amirthana Ramalingam,597866,Roaring Lions - SCL2020,3,0,0,1,0,0,0,0,1
+4185986,Jisson Jose,597855,DareDevils - SCL2020,3,0,1,0,1,0,0,1,1
+4199083,Mrinal Thakur,597866,Roaring Lions - SCL2020,3,0,0,1,0,0,0,0,1
+3910184,Kushal G.v,597865,HotShots - SCL2020,3,1,0,0,1,0,0,1,1
+4171366,Manisha Chandu,597869,The Assassinators - SCL2020,4,1,0,0,0,0,0,1,1
+4162071,Mohammad Irfan Alam,597863,Simeio Spirits - SCL2020,4,1,0,0,0,0,0,1,1
+4587481,Pankaj,597863,Simeio Spirits - SCL2020,4,0,0,1,0,0,0,0,1
+4169626,Kumar Vaibhav,597867,Skarp Elva(Sharp Eleven) - SCL2020,2,0,0,0,0,0,0,0,0
+4169288,Shahnawaz A,597866,Roaring Lions - SCL2020,2,0,0,0,0,0,0,0,0
+4162301,Ajay Gupta,597866,Roaring Lions - SCL2020,3,0,0,0,0,0,0,0,0
+4198196,Jayanta Roy,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,0,0,0,0,0,0,0,0
+4197374,Smirna Kushal,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,0,0,0,0,0,0,0,0
+4179140,Varsha Hrishikesh ,597864,TNT - SCL2020,3,0,0,0,0,0,0,0,0
+4582843,Narayan RL,597869,The Assassinators - SCL2020,3,0,0,0,0,0,0,0,0
+3914716,Vinayak Kammar,597855,DareDevils - SCL2020,3,0,0,0,0,0,0,0,0
+4105553,Sajid,597863,Simeio Spirits - SCL2020,3,0,0,0,0,0,0,0,0
+4102133,Rayapati Pranaya Sree,597855,DareDevils - SCL2020,3,0,0,0,0,0,0,0,0
+4155113,Hemanth V N,597864,TNT - SCL2020,3,0,0,0,0,0,0,0,0
+4105406,Vivek Kumar,597866,Roaring Lions - SCL2020,3,0,0,0,0,0,0,0,0
+4451569,Gunasundari Anandan,597865,HotShots - SCL2020,3,0,0,0,0,0,0,0,0
+4176292,Santhosh S,597859,Simeio Ninjas - SCL2020,3,0,0,0,1,0,0,0,0
+4171737,Sweekrithy Suresh,597863,Simeio Spirits - SCL2020,4,0,0,0,0,0,0,0,0
+4187015,Akulapalli Dileep,597869,The Assassinators - SCL2020,4,0,0,0,0,0,0,0,0
+2096878,Anuraag B,597863,Simeio Spirits - SCL2020,4,0,0,0,0,0,0,0,0
+4174768,Kumar Akash,597867,Skarp Elva(Sharp Eleven) - SCL2020,1,0,0,0,0,0,0,0,
+4179803,Nayanava Biswas,597867,Skarp Elva(Sharp Eleven) - SCL2020,1,0,0,0,0,0,0,0,
+4202338,Megha Chinchole,597863,Simeio Spirits - SCL2020,1,0,0,0,0,0,0,0,
+4584313,Gururaj Bhat,597866,Roaring Lions - SCL2020,1,0,0,0,0,0,0,0,
+4450184,Rahul Goud Godha ,597863,Simeio Spirits - SCL2020,1,0,0,0,0,0,0,0,
+4155575,Manisha S Basannavar,597855,DareDevils - SCL2020,1,0,0,0,0,0,0,0,
+4199766,Archana  Mallick,597865,HotShots - SCL2020,1,0,0,0,0,0,0,0,
+4161488,Tagore Pasam,597867,Skarp Elva(Sharp Eleven) - SCL2020,1,0,0,0,0,0,0,0,
+4173319,BHAJAMAN SAMAL,597865,HotShots - SCL2020,1,0,0,0,0,0,0,0,
+4196653,Rehaman Shaik,597865,HotShots - SCL2020,1,0,0,0,0,0,0,0,
+4162356,Venkat Kallam,597869,The Assassinators - SCL2020,1,0,0,0,0,0,0,0,
+4453891,Shreya Biswas,597867,Skarp Elva(Sharp Eleven) - SCL2020,1,0,0,0,0,0,0,0,
+4176615,Madan,597864,TNT - SCL2020,1,0,0,0,0,0,0,0,
+4161200,Avanish Mishra,597865,HotShots - SCL2020,1,0,0,0,0,0,0,0,
+4203982,Manjunath Kobal,597864,TNT - SCL2020,1,0,0,0,0,0,0,0,
+4172792,Dileep Kumar Tiwari,597869,The Assassinators - SCL2020,1,0,0,0,0,0,0,0,
+4588366,Mancy Thomas,597863,Simeio Spirits - SCL2020,1,0,0,0,0,0,0,0,
+4118218,RAKESH AVVARI,597859,Simeio Ninjas - SCL2020,1,0,0,0,0,0,0,0,
+4182851,Pabitra Borah,597855,DareDevils - SCL2020,1,0,0,0,0,0,0,0,
+4160647,Govardhan G,597869,The Assassinators - SCL2020,1,0,0,0,0,0,0,0,
+4191784,Nishant Gaurav,597859,Simeio Ninjas - SCL2020,2,0,0,0,0,0,0,0,
+4451056,Vasudha KJ,597859,Simeio Ninjas - SCL2020,2,0,0,0,0,0,0,0,
+4566592,Swathi Shankar,597855,DareDevils - SCL2020,2,0,0,0,0,0,0,0,
+4174358,Srinivas Raju G,597859,Simeio Ninjas - SCL2020,2,0,0,0,0,0,0,0,
+4200570,Nikita Sara Sunil,597863,Simeio Spirits - SCL2020,2,0,0,0,0,0,0,0,
+4114197,Shamili Gowda,597867,Skarp Elva(Sharp Eleven) - SCL2020,2,0,0,0,0,0,0,0,
+4163956,Ashok Regula,597864,TNT - SCL2020,2,0,0,0,0,0,0,0,
+4466126,Amruta Gawde,597859,Simeio Ninjas - SCL2020,2,0,0,0,0,0,0,0,
+4169989,Sanya Goswami,597865,HotShots - SCL2020,2,0,0,0,0,0,0,0,
+4104057,Sammedh Upadhye,597855,DareDevils - SCL2020,2,0,0,0,0,0,0,0,
+4185978,Siva Rajesh,597866,Roaring Lions - SCL2020,2,0,0,0,0,0,0,0,
+4106757,Kamesh Pinaka,597855,DareDevils - SCL2020,3,0,0,0,0,0,0,0,
+4162116,Mahammad Fayiz,597859,Simeio Ninjas - SCL2020,3,0,0,0,0,0,0,0,
+4559295,Kumar Gaurav Raj,597855,DareDevils - SCL2020,3,0,0,0,0,0,0,0,
+4189087,Praveen Reddy Palvai,597867,Skarp Elva(Sharp Eleven) - SCL2020,3,0,0,0,0,0,0,0,
+4173660,Arjula Sundeep,597869,The Assassinators - SCL2020,3,0,0,0,0,0,0,0,
+4971968,Ronit Asrani,597864,TNT - SCL2020,3,0,0,0,0,0,0,0,
+4199125,Phani D,597855,DareDevils - SCL2020,3,0,0,0,0,0,0,0,
+4580319,Richa Kumari,597866,Roaring Lions - SCL2020,3,0,0,0,0,0,0,0,
+4182873,Sowmya Sai,597864,TNT - SCL2020,3,0,0,0,0,0,0,0,
+4102045,Dinesh Babu,597859,Simeio Ninjas - SCL2020,3,0,0,0,0,0,0,0,
+4162331,Deepak Singh,597864,TNT - SCL2020,3,0,0,0,0,0,0,0,
+4575108,HEMANTH RAJ G B,597855,DareDevils - SCL2020,3,0,0,0,0,0,0,0,
+4448652,Sakshi Shukla,597869,The Assassinators - SCL2020,4,0,0,0,0,0,0,0,
+4102955,Senthilnathan Ravi,597869,The Assassinators - SCL2020,4,0,0,0,0,0,0,0,

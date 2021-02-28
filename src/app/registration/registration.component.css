@@ -1,0 +1,106 @@
+.registration {
+    margin: 10px;
+  }
+  
+  .point-button {
+    margin-left: 10px;
+  }
+  
+  .point-system {
+    margin: 10px;
+  }
+  
+  .action {
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .mat-table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .mat-header-cell,
+  .mat-cell {
+    width: auto;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 50px;
+    right: 5px;
+    margin-right: 10px;
+    z-index: 999;
+    height: 50px;
+    color: #cc3813;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  .mat-list {
+    margin: 10px;
+    width: max-content;
+  }
+  
+  .mat-list[_ngcontent-c29] {
+    padding-left: 25px !important;
+  }
+  
+  .mat-list[dense] .mat-subheader {
+    line-height: 15px;
+    height: 35px;
+  }
+  
+  .mat-list[dense] .mat-list-item {
+    height: 25px !important;
+  }
+  
+  .mat-list[dense] .mat-list-item .mat-list-item-content {
+    padding: 0 60px !important;
+  }
+  
+  .subList {
+    margin-top: 0;
+  }
+  
+  @media (max-width: 600px) {
+    .registration {
+      margin: 5px;
+    }
+  
+    .point-button {
+      margin-left: 5px;
+    }
+  
+    .point-system {
+      margin: 5px;
+    }
+  
+    .action {
+      justify-content: center;
+      text-align: center;
+      margin-top: 5px;
+    }
+  
+    .mat-table {
+      width: 100%;
+    }
+  
+    .sticky {
+      position: fixed;
+      top: 85px;
+      right: 0;
+      margin-right: 10px;
+      z-index: 999;
+      height: 50px;
+      color: #cc3813;
+      font-size: 7px;
+      font-weight: bold;
+    }
+  }
+  

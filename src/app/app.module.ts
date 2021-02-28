@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ScorerComponent } from './scorer/scorer.component';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { PlayerPointsComponent } from './dashboard/player-points/player-points.component';
 import { AdministratorComponent } from './administrator/administrator.component';
@@ -18,7 +17,6 @@ import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-
   declarations: [
     AppComponent,
     DashboardComponent,
-    ScorerComponent,
     PlayerPointsComponent,
     AdministratorComponent,
     RegistrationComponent,

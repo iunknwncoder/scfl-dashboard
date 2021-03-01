@@ -93,7 +93,7 @@
   
     .sticky {
       position: fixed;
-      top: 85px;
+      top: 50px;
       right: 0;
       margin-right: 10px;
       z-index: 999;

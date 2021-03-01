@@ -37,31 +37,31 @@ export class PlayersService {
   }
 
   getPlayers() {
-    return this.http.get(environment.API_URL + '/api/players');
+    return this.http.get('/api/players');
   }
 
   addPlayers(playerDetails) {
-    return this.http.post(environment.API_URL + '/api/addPlayers', playerDetails, { headers: this.getRequestHeader() });
+    return this.http.post('/api/addPlayers', playerDetails, { headers: this.getRequestHeader() });
   }
 
   addTeam(team) {
-    return this.http.post(environment.API_URL + '/api/addTeam', team, { headers: this.getRequestHeader() });
+    return this.http.post('/api/addTeam', team, { headers: this.getRequestHeader() });
   }
 
   getTeams() {
-    return this.http.get(environment.API_URL + '/api/getTeams');
+    return this.http.get('/api/getTeams');
   }
 
   addTeams(teams) {
-    return this.http.post(environment.API_URL + '/api/addTeams', teams, { headers: this.getRequestHeader() });
+    return this.http.post('/api/addTeams', teams, { headers: this.getRequestHeader() });
   }
 
   resetTeams() {
-    return this.http.get(environment.API_URL + '/api/resetTeams');
+    return this.http.get('/api/resetTeams');
   }
 
 
   resetPlayers() {
-    return this.http.get(environment.API_URL + '/api/resetPlayers');
+    return this.http.get('/api/resetPlayers');
   }
 }

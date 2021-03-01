@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently --kill-others  \"npm run server:run\" \"ng serve --aot --progress=false --proxy-config proxy.conf.json --open\"",
+    "start": "node dist/server/app.js",
     "predev": "tsc -p server",
     "dev": "concurrently \"ng serve --port 8080 --proxy-config proxy.conf.json --open \" \"tsc -w -p server\" \"nodemon dist/server/app.js\"",
     "test": "ng test",
